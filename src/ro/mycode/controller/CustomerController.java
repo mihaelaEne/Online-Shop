@@ -50,7 +50,7 @@ public class CustomerController {
         this.customers.add(customer);
     }
 
-    public void removeManager(Customer customer) {
+    public void removeCustomer(Customer customer) {
         this.customers.remove(customer);
     }
 

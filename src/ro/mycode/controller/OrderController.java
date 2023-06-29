@@ -42,7 +42,7 @@ public class OrderController {
         }
     }
 
-    //todo:functie ce primeste id prod si returneaza o lista de carti
+    //todo:functie ce primeste id prod si returneaza o lista de product
 
 
     public ArrayList<Order> findAllProductsOrders(int productId) {
