@@ -53,7 +53,7 @@ public class ProductController {
     }
 
 
-    public Product findAdminById(int id){
+    public Product findProductById(int id){
         for(int i=0; i<products.size();i++){
             if(products.get(i).getId()==id){
                 return products.get(i);
