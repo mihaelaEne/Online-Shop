@@ -1,2 +1,0 @@
-1,Marinescu Valentina,marinescu@valentina,pass1,077625252,asistent-manager
-2,Tudorescu Ionel,tudorescu@ionel,pass2,0771662566,manager

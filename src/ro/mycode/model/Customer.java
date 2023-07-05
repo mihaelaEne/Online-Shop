@@ -2,100 +2,71 @@ package ro.mycode.model;
 
 import java.util.Objects;
 
-public class Customer {
+public class Customer extends User {
 
-    private int id;
-    private String name;
-    private String email;
-    private String pass;
-    private String phoneNumber;
+  private int numberOfOrders;
+  private String typeOfMembership;
 
-    public Customer(int id, String name, String email, String pass, String phoneNumber) {
-        this.id = id;
-        this.name = name;
-        this.email = email;
-        this.pass = pass;
-        this.phoneNumber = phoneNumber;
+    public Customer(int numberOfOrders, String typeOfMembership) {
+        this.numberOfOrders = numberOfOrders;
+        this.typeOfMembership = typeOfMembership;
     }
 
-    public int getId() {
-        return id;
+    public Customer(String type, int id, String name, String email, String pass, int numberOfOrders, String typeOfMembership) {
+        super(type, id, name, email, pass);
+        this.numberOfOrders = numberOfOrders;
+        this.typeOfMembership = typeOfMembership;
     }
 
-    public void setId(int id) {
-        this.id = id;
+    public int getNumberOfOrders() {
+        return numberOfOrders;
     }
 
-    public String getName() {
-        return name;
+    public void setNumberOfOrders(int numberOfOrders) {
+        this.numberOfOrders = numberOfOrders;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public String getTypeOfMembership() {
+        return typeOfMembership;
     }
 
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getPass() {
-        return pass;
-    }
-
-    public void setPass(String pass) {
-        this.pass = pass;
-    }
-
-    public String getPhoneNumber() {
-        return phoneNumber;
-    }
-
-    public void setPhoneNumber(String phoneNumber) {
-        this.phoneNumber = phoneNumber;
+    public void setTypeOfMembership(String typeOfMembership) {
+        this.typeOfMembership = typeOfMembership;
     }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
         if (!(o instanceof Customer)) return false;
+        if (!super.equals(o)) return false;
         Customer customer = (Customer) o;
-        return id == customer.id && name.equals(customer.name) && email.equals(customer.email) && pass.equals(customer.pass) && phoneNumber.equals(customer.phoneNumber);
+        return numberOfOrders == customer.numberOfOrders && typeOfMembership.equals(customer.typeOfMembership);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, name, email, pass, phoneNumber);
+        return Objects.hash(super.hashCode(), numberOfOrders, typeOfMembership);
     }
 
     @Override
     public String toString() {
         String text = "";
         text += "I am a customer with the following characteristics:" + "\n";
-        text += "id: " + this.id + "\n";
-        text += "name: " + this.name + "\n";
-        text += "email: " + this.email + "\n";
-        text += "phoneNumber: " + this.phoneNumber + "\n";
+        text+="type: "+super.getType()+"\n";
+        text += "id: " + super.getId() + "\n";
+        text += "name: " + super.getName() + "\n";
+        text += "email: " + super.getEmail() + "\n";
+        text += "role: " + this.numberOfOrders + "\n";
+        text += "experience: " + this.typeOfMembership;
         return text;
-
     }
 
-    public Customer(String prop) {
-        String[] split = prop.split(",");
-        this.id = Integer.parseInt(split[0]);
-        this.name = split[1];
-        this.email = split[2];
-        this.pass = split[3];
-        this.phoneNumber =split[4];
-
+    public Customer(String prop){
+        String [] split=prop.split(",");
+        this.numberOfOrders=Integer.parseInt(split[5]);
+        this.typeOfMembership=split[6];
     }
+    public String toSave(){ return super.toSave()+","+numberOfOrders+","+typeOfMembership;}
 
-
-    public String toSave() {
-        return id + "," + name + "," + email + "," + pass + "," + phoneNumber;
-    }
 
 }
