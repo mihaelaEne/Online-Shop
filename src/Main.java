@@ -5,10 +5,11 @@ public class Main {
     public static void main(String[] args) {
 
 
-        UserController userController = new UserController();
-        userController.load();
-        userController.afisareUser();
+//        UserController userController = new UserController();
+//        userController.load();
+//        userController.afisareUser();
 
+        ViewLogIn viewLogIn=new ViewLogIn();
 
     }
 }
