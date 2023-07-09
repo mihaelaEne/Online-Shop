@@ -18,6 +18,18 @@ public class Customer extends User {
         this.typeOfMembership = typeOfMembership;
     }
 
+    public Customer(String type, int id, String name, String email, String pass) {
+        super(type, id, name, email, pass);
+
+    }
+
+    public Customer(String prop){
+        super(prop);
+        String [] split=prop.split(",");
+        this.numberOfOrders=Integer.parseInt(split[5]);
+        this.typeOfMembership=split[6];
+    }
+
     public int getNumberOfOrders() {
         return numberOfOrders;
     }
@@ -56,16 +68,12 @@ public class Customer extends User {
         text += "id: " + super.getId() + "\n";
         text += "name: " + super.getName() + "\n";
         text += "email: " + super.getEmail() + "\n";
-        text += "role: " + this.numberOfOrders + "\n";
-        text += "experience: " + this.typeOfMembership;
+        text += "numberOfOrders: " + this.numberOfOrders + "\n";
+        text += "typeofMembership: " + this.typeOfMembership;
         return text;
     }
 
-    public Customer(String prop){
-        String [] split=prop.split(",");
-        this.numberOfOrders=Integer.parseInt(split[5]);
-        this.typeOfMembership=split[6];
-    }
+
     public String toSave(){ return super.toSave()+","+numberOfOrders+","+typeOfMembership;}
 
 

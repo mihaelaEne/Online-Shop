@@ -7,16 +7,26 @@ public class Manager extends User {
     public String role;
     public int experince;
 
+
     public Manager(){}
     public Manager(String role, int experince) {
         this.role = role;
         this.experince = experince;
+    }
+    public Manager(String prop){
+        super(prop);
+        String [] split=prop.split(",");
+        this.role=split[5];
+        this.experince=Integer.parseInt(split[6]);
     }
 
     public Manager(String type, int id, String name, String email, String pass, String role, int experince) {
         super(type, id, name, email, pass);
         this.role = role;
         this.experince = experince;
+    }
+
+    public Manager(int id, String name, String email, String pass, String phoneNumber, String role) {
     }
 
     public String getRole() {
@@ -64,11 +74,7 @@ public class Manager extends User {
 
     }
 
-    public Manager(String prop){
-        String [] split=prop.split(",");
-        this.role=split[5];
-        this.experince=Integer.parseInt(split[6]);
-    }
+
 
     public String toSave(){ return super.toSave()+","+role+","+experince;}
 

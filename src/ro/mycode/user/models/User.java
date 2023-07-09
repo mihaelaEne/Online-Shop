@@ -17,6 +17,14 @@ public class User {
         this.email = email;
         this.pass = pass;
     }
+    public User(String prop) {
+        String[] split = prop.split(",");
+        this.type=split[0];
+        this.id = Integer.parseInt(split[1]);
+        this.name = split[2];
+        this.email = split[3];
+        this.pass = split[4];
+    }
 
     public User(){}
 
@@ -85,14 +93,7 @@ public class User {
 
     }
 
-    public User(String prop) {
-        String[] split = prop.split(",");
-        this.type=split[0];
-        this.id = Integer.parseInt(split[1]);
-        this.name = split[2];
-        this.email = split[3];
-        this.pass = split[4];
-    }
+
     public String toSave() {
         return type+","+id + "," + name + "," + email + "," + pass;
     }

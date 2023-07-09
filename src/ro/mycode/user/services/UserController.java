@@ -29,6 +29,8 @@ public class UserController {
    }
 
     public void load() {
+        //mereu clar la lista ca sa nu imi af de 2 ori, adica sa nu imi faca load ul de sus
+        this.users.clear();
         try {
             File file = new File("C:\\mycode\\OOP\\OnlineShop\\src\\ro\\mycode\\user\\repository\\user.txt");
             Scanner scanner = new Scanner(file);
@@ -40,7 +42,7 @@ public class UserController {
                         break;
 
                     case "Customer":
-                        this.users.add((new Customer(text)));
+                        this.users.add(new Customer(text));
                         break;
                 }
 
