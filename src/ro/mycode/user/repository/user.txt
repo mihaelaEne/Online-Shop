@@ -1,5 +1,5 @@
-Manager,1,Maria Ioana,maria@ioana,pass1,asistent manager,5,0771268843
-Manager,2,Popescu Ion,popescu@ion,pass2,manager principal,9,0881268843
+Manager,1,Maria Ioana,maria@ioana,pass1,asistent manager,5
+Manager,2,Popescu Ion,popescu@ion,pass2,manager principal,9
 Manager,3,Enache Gabriela,enache@gabriela,pass3,manager junior,2
 Customer,4,Popescu Ion,popescu@ion,pass4,20,gold
 Customer,5,Marinescu Mihai,marinescu@mihai,pass5,5,silver

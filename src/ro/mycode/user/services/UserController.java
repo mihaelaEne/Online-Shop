@@ -61,6 +61,15 @@ public class UserController {
         }
     }
 
+    public void afisareClient(){
+       for(int i=0;i<users.size();i++){
+           if(users.get(i).getType().equals("Customer")){
+               System.out.println(this.users.get(i));
+               System.out.println("\n");
+           }
+       }
+    }
+
     public void addUser(User user){
         this.users.add(user);
     }

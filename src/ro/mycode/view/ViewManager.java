@@ -64,7 +64,7 @@ public class ViewManager implements View {
                     System.out.println("V-ati delogat");
                     break;
                 case 5:
-                    userController.toString();
+                    userController.afisareUser();
                     break;
                 case 6:
                     adaugareManager();
@@ -78,7 +78,7 @@ public class ViewManager implements View {
                     System.out.println("V-ati delogat");
                     break;
                 case 9:
-                    orderController.afisareOrder();
+                    userController.afisareClient();
                     break;
                 case 10:
                     adaugareClient();
