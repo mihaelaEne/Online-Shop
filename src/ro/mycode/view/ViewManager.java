@@ -64,7 +64,7 @@ public class ViewManager implements View {
                     System.out.println("V-ati delogat");
                     break;
                 case 5:
-                    userController.afisareUser();
+                    userController.afisareManager();
                     break;
                 case 6:
                     adaugareManager();
