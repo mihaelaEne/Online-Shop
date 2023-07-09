@@ -10,6 +10,7 @@ public class Product {
     private float weight;
     private String category;
 
+   
     public Product() {
     }
 
@@ -90,8 +91,8 @@ public class Product {
         this.type = split[0];
         this.id = Integer.parseInt(split[1]);
         this.name = split[2];
-        this.price = Integer.parseInt(split[3]);
-        this.weight = Integer.parseInt(split[4]);
+        this.price = Float.parseFloat(split[3]);
+        this.weight = Float.parseFloat(split[4]);
         this.category = split[5];
     }
 

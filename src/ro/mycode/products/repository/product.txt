@@ -1,6 +1,7 @@
-Phone,1,Iphone11,4000,450,Smartphone,11 Pro,256,black
-Phone,2,SamsungS14,5000,200,Smartphone,S14 Ultra,500,white
-Phone,3,Nokia1300,200,800,Smartphone,1300,0,blue
-Tricou,4,tricou Polo,250,100,Imbracaminte,M,in
-Tricou,5,tricou in V,100,100,Imbracaminte,S,polistiren
-Tricou,6,tricou fara guker,56,100,Imbracaminte,XXL,bumbac
+Phone,1,Iphone11,4000.0,450.0,Smartphone
+Phone,2,SamsungS14,5000.0,200.0,Smartphone
+Phone,3,Nokia1300,200.0,800.0,Smartphone
+Tricou,4,tricou Polo,250.0,100.0,Imbracaminte
+Tricou,5,tricou in V,100.0,100.0,Imbracaminte
+Tricou,6,tricou fara guker,56.0,100.0,Imbracaminte
+Phone,1234,Phone1234,54444.0,900.0,Phonee

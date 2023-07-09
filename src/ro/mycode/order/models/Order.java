@@ -97,9 +97,9 @@ public class Order implements DetailsOrder {
     public Order(String prop) {
         String[] split = prop.split(",");
         this.id = Integer.parseInt(split[0]);
-        this.productId = Integer.parseInt(split[2]);
-        this.price = Integer.parseInt(split[3]);
-        this.date = LocalDate.parse(split[4]);
+        this.productId = Integer.parseInt(split[1]);
+        this.price = Float.parseFloat(split[2]);
+        this.date = LocalDate.parse(split[3]);
     }
 
 

@@ -69,6 +69,14 @@ public class UserController {
            }
        }
     }
+    public void afisareManager(){
+        for(int i=0;i<users.size();i++){
+            if(users.get(i).getType().equals("Manager")){
+                System.out.println(this.users.get(i));
+                System.out.println("\n");
+            }
+        }
+    }
 
     public void addUser(User user){
         this.users.add(user);
