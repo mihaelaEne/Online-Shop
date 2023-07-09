@@ -1,4 +1,4 @@
-package ro.mycode.model;
+package ro.mycode.order.models;
 
 
 

@@ -1,7 +1,7 @@
 package ro.mycode.view;
 
-import ro.mycode.controller.OrderController;
-import ro.mycode.controller.UserController;
+import ro.mycode.order.services.OrderController;
+import ro.mycode.user.services.UserController;
 
 import java.util.Scanner;
 

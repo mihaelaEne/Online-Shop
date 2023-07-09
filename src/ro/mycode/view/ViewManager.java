@@ -1,14 +1,6 @@
 package ro.mycode.view;
 
 
-import ro.mycode.controller.OrderController;
-import ro.mycode.controller.ProductController;
-import ro.mycode.model.Customer;
-import ro.mycode.model.Manager;
-import ro.mycode.model.Product;
-
-import java.util.Scanner;
-
 public class ViewManager {
 
 //    private CustomerController customerController;

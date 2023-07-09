@@ -1,33 +1,36 @@
-package ro.mycode.controller;
+package ro.mycode.user.services;
 
 
-import ro.mycode.model.Customer;
-import ro.mycode.model.Manager;
-import ro.mycode.model.Product;
-import ro.mycode.model.User;
+import ro.mycode.user.models.Customer;
+import ro.mycode.user.models.Manager;
+import ro.mycode.user.models.User;
 
 import java.io.File;
 import java.io.FileWriter;
 import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Scanner;
-import java.util.concurrent.ExecutionException;
 
 public class UserController {
     private ArrayList<User> users = new ArrayList<>();
 
 
-    public UserController(ArrayList<User> users) {
+    public UserController() {
         this.users = new ArrayList<>();
 
         load();
 
     }
 
+    //constructor care ma ajuta mereu la testare
+   public  UserController(ArrayList<User>users){
+
+        this.users=users;
+   }
 
     public void load() {
         try {
-            File file = new File("C:\\mycode\\OOP\\OnlineShop\\src\\ro\\mycode\\data\\user.txt");
+            File file = new File("C:\\mycode\\OOP\\OnlineShop\\src\\ro\\mycode\\user\\repository\\user.txt");
             Scanner scanner = new Scanner(file);
             while (scanner.hasNextLine()) {
                 String text = scanner.nextLine();
@@ -106,7 +109,7 @@ public class UserController {
 
     public void save(){
         try {
-            File file = new File("C:\\mycode\\OOP\\OnlineShop\\src\\ro\\mycode\\data\\user.txt");
+            File file = new File("C:\\mycode\\OOP\\OnlineShop\\src\\ro\\mycode\\user\\repository\\user.txt");
             FileWriter fileWriter=new FileWriter(file);
             PrintWriter printWriter=new PrintWriter(fileWriter);
             printWriter.print(toSave());
