@@ -1,9 +1,5 @@
 package ro.mycode.view;
 
-import ro.mycode.model.Customer;
-import ro.mycode.model.Manager;
-import java.util.Scanner;
-
 public class ViewLogIn {
 
 //        private ManagerController managerController;

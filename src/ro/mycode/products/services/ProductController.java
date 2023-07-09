@@ -1,7 +1,6 @@
-package ro.mycode.controller;
+package ro.mycode.products.services;
 
-import ro.mycode.model.Manager;
-import ro.mycode.model.Product;
+import ro.mycode.products.models.Product;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -22,7 +21,7 @@ public class ProductController {
 
     public void load(){
         try{
-            File file=new File("C:\\mycode\\OOP\\OnlineShop\\src\\ro\\mycode\\data\\product.txt");
+            File file=new File("C:\\mycode\\OOP\\OnlineShop\\src\\ro\\mycode\\products\\repository\\product.txt");
             Scanner scanner = new Scanner(file);
             while (scanner.hasNextLine()) {
                 Product product=new Product(scanner.nextLine());
@@ -74,7 +73,7 @@ public class ProductController {
 
     public void save(){
         try{
-            File file=new File("C:\\mycode\\OOP\\OnlineShop\\src\\ro\\mycode\\data\\product.txt");
+            File file=new File("C:\\mycode\\OOP\\OnlineShop\\src\\ro\\mycode\\products\\repository\\product.txt");
             FileWriter fileWriter=new FileWriter(file);
             PrintWriter printWriter=new PrintWriter(fileWriter);
             printWriter.print(toSave());

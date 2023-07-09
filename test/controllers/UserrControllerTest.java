@@ -1,12 +1,11 @@
 package controllers;
 
 import org.junit.Test;
-import ro.mycode.controller.UserController;
-import ro.mycode.model.Customer;
-import ro.mycode.model.Manager;
-import ro.mycode.model.User;
+import ro.mycode.user.services.UserController;
+import ro.mycode.user.models.Customer;
+import ro.mycode.user.models.Manager;
+import ro.mycode.user.models.User;
 
-import java.io.File;
 import java.util.ArrayList;
 
 import static org.junit.Assert.*;

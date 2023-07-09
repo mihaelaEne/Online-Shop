@@ -1,8 +1,8 @@
-package ro.mycode.model;
+package ro.mycode.products.models;
 
 import java.util.Objects;
 
-public class Tricou extends Product{
+public class Tricou extends Product {
 
     private String size;
     private String material;

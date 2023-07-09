@@ -1,6 +1,6 @@
-package ro.mycode.controller;
+package ro.mycode.order.services;
 
-import ro.mycode.model.Order;
+import ro.mycode.order.models.Order;
 
 import java.io.File;
 import java.io.FileWriter;
@@ -24,7 +24,7 @@ public class OrderController {
 
     public void load() {
         try {
-            File file = new File("C:\\mycode\\OOP\\OnlineShop\\src\\ro\\mycode\\data\\order.txt");
+            File file = new File("C:\\mycode\\OOP\\OnlineShop\\src\\ro\\mycode\\order\\repository\\order.txt");
             Scanner scanner = new Scanner(file);
             while (scanner.hasNextLine()) {
                 Order order = new Order(scanner.nextLine());
@@ -60,7 +60,7 @@ public class OrderController {
         this.orders.add(order);
     }
 
-    public void removeBook(Order order) {
+    public void removeOrder(Order order) {
         this.orders.remove(order);
     }
 
@@ -99,7 +99,7 @@ public class OrderController {
 
     public void save() {
         try {
-            File file = new File("C:\\mycode\\OOP\\OnlineShop\\src\\ro\\mycode\\data\\order.txt");
+            File file = new File("C:\\mycode\\OOP\\OnlineShop\\src\\ro\\mycode\\order\\repository\\order.txt");
 
             FileWriter fileWriter = new FileWriter(file);
 
