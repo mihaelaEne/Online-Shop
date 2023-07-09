@@ -2,7 +2,7 @@ package ro.mycode.order.models;
 
 
 
-import ro.mycode.interfaces.DetailsOrder;
+import ro.mycode.orderDetails.DetailsOrder;
 
 import java.time.LocalDate;
 import java.util.Objects;

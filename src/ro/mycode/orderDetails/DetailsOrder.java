@@ -1,4 +1,4 @@
-package ro.mycode.interfaces;
+package ro.mycode.orderDetails;
 
 public interface DetailsOrder {
 
